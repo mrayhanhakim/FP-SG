@@ -4,11 +4,17 @@
   z-index: 1;
   top: 0;
   width: 100%;
+  background-color: #1a1a1a;
 }
 
 #right-nav,
 #left-nav {
   padding: 20px 26px;
+}
+
+#left-nav {
+  display: flex;
+  align-items: center;
 }
 
 #nav-logo-container {
@@ -35,7 +41,6 @@
 
 #nav-link-wrapper {
   display: none;
-  align-self: center;
 }
 
 .nav-link,
@@ -44,12 +49,9 @@
   text-decoration: none;
 }
 
-#nav-link-wrapper .nav-link:not(:last-child) {
+#nav-link-wrapper .nav-link:not(:last-child),
+#nav-join-button {
   padding: 16px 18px;
-}
-
-#nav-link-wrapper .nav-link:nth-child(2) {
-  margin-right: 10px;
 }
 
 .btn {
@@ -61,22 +63,40 @@
 #nav-button {
   display: block;
   outline: none;
-  border: 1px hsla(0, 0%, 100%, 0.1) solid;
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
   background-color: #1a1a1a1a;
   align-self: center;
-  padding: 10px 16px;
-  font-size: 20pt;
+  padding: 6px 16px;
+  font-size: 20px;
   color: hsla(0, 0%, 100%, 0.5);
   border-radius: 5px;
+  cursor: pointer;
 }
 
-@media only screen and (min-width: 769px) {
+.drop {
+  display: flex !important;
+  position: absolute;
+  z-index: 1;
+  top: 88px;
+  left: 0;
+  background-color: #1a1a1a;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+@media only screen and (min-width: 768px) {
   #nav-button {
     display: none;
   }
 
   #nav-link-wrapper {
-    display: block;
+    display: flex;
+    align-items: center;
+  }
+
+  #nav-join-button {
+    padding-right: 0;
   }
 
   #right-nav,
