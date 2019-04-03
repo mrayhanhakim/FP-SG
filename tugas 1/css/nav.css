@@ -10,6 +10,7 @@
 #right-nav,
 #left-nav {
   padding: 20px 26px;
+  animation-name: unshrink-p;
 }
 
 #left-nav {
@@ -21,16 +22,18 @@
   display: flex;
 }
 
-#nav-logo-container div {
+#nav-icon-text {
   align-self: center;
   margin-left: 5px;
   font-size: 20px;
+  transition: font-size 0.5s;
 }
 
-#nav-logo-container img {
+#nav-icon {
   margin: 9px 0;
   width: 28px;
   height: 28px;
+  transition: width 0.5s, height 0.5s;
 }
 
 #right-nav {
@@ -77,12 +80,68 @@
   display: flex !important;
   position: absolute;
   z-index: 1;
-  top: 88px;
   left: 0;
   background-color: #1a1a1a;
   flex-direction: column;
   width: 100%;
   align-items: flex-start;
+}
+
+@keyframes drop {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.shrink,
+.unshrink {
+  animation-duration: 0.5s;
+}
+
+#left-nav.shrink,
+#right-nav.shrink {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  animation-name: shrink-p;
+}
+
+#nav-icon.shrink {
+  width: 21px;
+  height: 21px;
+}
+
+#nav-icon-text.shrink {
+  font-size: 18px;
+}
+
+#left-nav.unshrink,
+#right-nav.unshrink {
+  animation-name: unshrink-p;
+}
+
+@keyframes shrink-p {
+  from {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  to {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
+
+@keyframes unshrink-p {
+  from {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  to {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -104,12 +163,12 @@
     padding: 20px 36px;
   }
 
-  #nav-logo-container div {
+  #nav-icon-text {
     font-size: 26px;
   }
 
-  #nav-logo-container img {
-    width: initial;
-    height: initial;
+  #nav-icon {
+    width: 42px;
+    height: 42px;
   }
 }
