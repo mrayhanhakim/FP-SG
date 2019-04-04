@@ -1,0 +1,318 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', '-apple-system';
+}
+
+#container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.content-title {
+  text-align: center;
+  font-size: 30px;
+  margin: 100px 0 40px;
+  font-weight: bold;
+}
+
+/** Header */
+#top-wrapper {
+  display: block;
+  background: url(../assets/header_img.png) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#right-top {
+  display: none;
+}
+
+#header-img {
+  margin-left: 95px;
+  position: relative;
+  height: 120vh;
+}
+
+#header-img img:first-child {
+  height: 120vh;
+}
+
+#header-img img:last-child {
+  width: 400px;
+  height: 340px;
+  position: absolute;
+  top: 35%;
+  left: 27%;
+  bottom: 10%;
+}
+
+/** Division */
+#division-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+#division-img img {
+  display: none;
+}
+
+#division-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.division-icon-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.division-icon-container > .division-text {
+  display: inline-block;
+  align-self: center;
+  margin-left: 15px;
+}
+
+/** Honor & Awards */
+#award-wrapper > h1 {
+  text-align: center;
+}
+
+#award-wrapper p {
+  margin: 10px;
+  font-size: 12px;
+}
+
+#award-content-1 {
+  margin-bottom: 1.5em;
+}
+
+#award-content-1,
+#award-content-2 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.award-content-wrapper {
+  width: 261px;
+}
+
+.award-contestant,
+.award-title {
+  font-weight: bold;
+}
+
+.award-container {
+  margin-bottom: 1.5em;
+}
+
+.award-title {
+  color: #f07127;
+}
+
+#award-content-2 .award-img {
+  display: none;
+}
+
+.award-img {
+  text-align: center;
+}
+
+.award-img img {
+  max-width: 273px;
+}
+
+/** Team */
+.team-img-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin-bottom: 2em;
+}
+
+.team-img {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 15px;
+}
+
+.team-img img {
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  align-self: center;
+}
+
+.team-img p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.team-img .team-name {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+#footer-wrapper {
+  width: 100%;
+  border-top: 1px solid black;
+  margin-top: 50px;
+}
+
+#footer-container {
+  display: flex;
+  padding: 6px 18px;
+}
+
+#left-footer {
+  flex-grow: 1;
+  align-self: center;
+  font-size: 11pt;
+}
+
+#right-footer {
+  font-size: 50px;
+}
+
+#right-footer a,
+#right-footer a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#right-footer i:first-child {
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 500px) {
+  .content-title {
+    margin: 100px 0 70px;
+    font-size: 40px;
+  }
+
+  #division-img {
+    text-align: center;
+  }
+
+  #division-img img {
+    display: inline-block;
+    max-width: 360px;
+  }
+
+  #division-img,
+  #division-list {
+    flex-grow: 1;
+  }
+
+  #division-list {
+    margin-left: 2em;
+  }
+
+  #division-img {
+    margin-right: 2em;
+  }
+
+  .division-icon-container > .division-text {
+    font-size: 20px;
+  }
+
+  #award-wrapper p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #division-wrapper {
+    justify-content: unset;
+    flex-flow: unset;
+  }
+
+  .award-content-wrapper {
+    width: 341px;
+  }
+
+  .award-img img {
+    max-width: 374px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #top-wrapper {
+    display: flex;
+  }
+
+  #left-top,
+  #right-top {
+    width: 50%;
+  }
+
+  #right-top {
+    display: block;
+  }
+
+  #division-list {
+    margin-left: 7em;
+  }
+
+  #division-img {
+    margin-right: 7em;
+  }
+
+  #award-content-1,
+  #award-content-2 {
+    flex-flow: row;
+  }
+
+  #award-content-1 .award-content-wrapper,
+  #award-content-2 .award-img {
+    margin-right: 4em;
+  }
+
+  #award-content-1 .award-img,
+  #award-content-2 .award-content-wrapper {
+    margin-left: 4em;
+  }
+
+  .award-content-wrapper,
+  .award-img {
+    flex-grow: 1;
+  }
+
+  .award-content-wrapper {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .award-content {
+    align-self: center;
+  }
+
+  #award-content-2 .award-content-wrapper {
+    order: 1;
+  }
+
+  #award-content-2 .award-img {
+    display: block;
+    order: 0;
+  }
+
+  #award-content-2 .award-img img {
+    max-width: 437px;
+  }
+
+  .team-img-container {
+    flex-flow: row;
+  }
+
+  .team-img {
+    margin: 0 1.5em;
+  }
+}

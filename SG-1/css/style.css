@@ -1,0 +1,141 @@
+.container {
+  width: 700px;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  margin-bottom: 15px;
+  display: inline-block;
+  background-color: grey;
+  color: white;
+  padding: 15px 0;
+}
+
+.navbar > .navbar-logo,
+.navbar > .navbar-menu {
+  display: inline-block;
+}
+
+.navbar > .navbar-logo {
+  float: left;
+  margin-left: 10px;
+  width: 47%;
+}
+
+.navbar > .navbar-menu {
+  float: right;
+  width: 50%;
+}
+
+.list-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.list-menu > li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.main {
+  width: 100%;
+}
+
+.main-bar {
+  width: 70%;
+  float: left;
+  margin-right: 10px;
+}
+
+.side-bar {
+  width: 27%;
+  float: right;
+}
+
+.main-bar > .main-header {
+  height: 150px;
+  background-color: blue;
+  color: white;
+  position: relative;
+}
+
+.main-header span {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-color: darkblue;
+}
+
+.main-bar .main-content {
+  margin-top: 30px;
+  float: left;
+}
+
+.main-content .content {
+  width: 45%;
+}
+
+.content.content-1 {
+  float: left;
+}
+
+.content.content-2 {
+  float: right;
+  margin-left: 20px;
+}
+
+.content-judul {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+.content-judul > h3 {
+  margin: 0;
+}
+
+.side-bar > .side-main {
+  height: 150px;
+  background-color: yellow;
+  margin-bottom: 30px;
+}
+
+.side-bar > .side-main,
+.side-bar > .side-quote {
+  width: 100%;
+}
+
+blockquote {
+  position: relative;
+  text-align: center;
+  padding: 4em 1em 0.5em 1em;
+}
+
+.side-quote > blockquote::before,
+.side-quote > blockquote::after {
+  color: green;
+  font-size: 5em;
+  line-height: 1;
+}
+
+.side-quote > blockquote::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\201c";
+}
+
+.side-quote > blockquote::after {
+  position: absolute;
+  bottom: -1.3em;
+  right: -0.5em;
+  float: right;
+  content: "\201d";
+}
+
+.footer {
+  float: left;
+  width: 100%;
+  border-top: 1px solid black;
+  margin-top: 30px;
+}
